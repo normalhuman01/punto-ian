@@ -1,0 +1,153 @@
+#contacto {
+    padding: 5rem 1rem 2rem 1rem;
+    background-color: $white;
+    .contacto-mapa {
+        width: 100%;
+        height: 100%;
+        margin-top: 2rem;
+    }
+    .contacto-info {
+        padding: 1rem 0;
+        border-radius: 15px;
+        background-color: $white;
+        h3 {
+            margin-top: 0.5rem;
+            color: $primaryColor;
+        }
+    }
+    .enviar-msg {
+        font-weight: 800;
+        text-transform: uppercase;
+        width: 150px;
+        border-radius: 15px;
+        background-color: rgb(255, 202, 104);
+        color: $secondaryColor;
+        box-shadow: 5px 5px 15px #bebebeb2, -5px -5px 15px #ffffff;
+        border: 0;
+        padding: 0.5rem;
+        margin: 1rem 0;
+    }
+    $animationSpeed: 40s;
+
+    // Animation
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-150px * 14));
+        }
+    }
+    article {
+        padding-top: 3rem;
+        p {
+            font-family: $font;
+            color: $secondaryColor;
+        }
+        .slider {
+            background: transparent;
+            height: fit-content;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+
+            &::before,
+            &::after {
+                content: "";
+                background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+                height: fit-content;
+                position: absolute;
+                width: 150px;
+                z-index: 2;
+            }
+
+            &::after {
+                right: 0;
+                top: 0;
+                transform: rotateZ(180deg);
+            }
+
+            &::before {
+                left: 0;
+                top: 0;
+            }
+
+            .slide-track {
+                animation: scroll $animationSpeed linear infinite;
+                display: flex;
+                width: calc(150px * 28);
+                align-items: center;
+            }
+
+            .slide {
+                height: fit-content;
+                width: 150px;
+                img {
+                    padding: 10px;
+                    width: inherit;
+                }
+            }
+        }
+    }
+
+    @keyframes carousel {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-200px * 14));
+        }
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #contacto {
+        position: relative;
+        padding: 3rem 2rem 6rem 2rem;
+        .contacto-info {
+            position: absolute;
+            z-index: 1000;
+            width: 300px;
+            top: 150px;
+            left: 35px;
+            border-radius: 1rem;
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 1.5rem;
+
+            a {
+                text-decoration: none;
+                transition: all 0.2s;
+                font-weight: 800;
+                &:hover {
+                    font-size: 15px;
+                }
+            }
+        }
+        article {
+            padding-top: 5rem;
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    #contacto {
+        padding: 5rem 2rem 2rem 2rem;
+        .contacto-info {
+            top: 310px;
+            left: 2.5rem;
+        }
+    }
+}

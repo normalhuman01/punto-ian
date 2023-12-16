@@ -1,0 +1,27 @@
+#tour {
+    background-color: $white;
+    padding: 2rem 2rem 5rem 2rem;
+}
+@media (min-width: 992px) {
+    #tour {
+        background-color: $white;
+        text-align: center;
+        padding: 2rem 4rem 6rem 4rem;
+        img {
+            width: 70%;
+            transition: all 0.1s ease;
+            &:hover {
+                filter: brightness(1.1);
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+@media (min-width: 1400px) {
+    #tour {
+        background-color: $white;
+        img {
+            width: 50%;
+        }
+    }
+}

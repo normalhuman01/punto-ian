@@ -1,0 +1,125 @@
+footer {
+    background-color: $secondaryColor;
+    padding: 2rem 1rem;
+    div:nth-child(2) {
+        padding: 0rem 0 2.5rem 0;
+    }
+    .icons-footer {
+        width: 100%;
+        padding: 1.2rem;
+        filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.76));
+    }
+    h4 {
+        color: $primaryColor;
+        font-weight: 800;
+    }
+    p {
+        color: $white;
+    }
+    .copy {
+        font-size: 12px;
+        text-align: center;
+    }
+    .form-control {
+        margin: 1rem 0;
+        input {
+            border-radius: 15px;
+            padding: 5px;
+            width: 65%;
+            &:disabled {
+                background-color: gray;
+            }
+        }
+        button {
+            border-radius: 15px;
+            background-color: $primaryColor;
+            border: 0;
+            padding: 7px 15px 8px 15px;
+            margin-left: -20px;
+            font-weight: 800;
+            width: 35%;
+            &:hover {
+                background-color: #000;
+                color: $primaryColor;
+            }
+            &:disabled {
+                background-color: gray;
+                &:hover {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+.copy {
+    width: 100%;
+    background-color: $primaryColor;
+    font-size: 12px;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: 800;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    footer {
+        .icons-footer {
+            width: 50%;
+        }
+        .form-control {
+            input {
+                width: 45%;
+            }
+            button {
+                width: 25%;
+            }
+        }
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2.5rem 2rem 1rem 2rem;
+
+        div:first-child {
+            width: 30%;
+        }
+        .icons-footer {
+            width: 100%;
+        }
+        .form-control {
+            input {
+                width: 65%;
+            }
+            button {
+                width: 35%;
+            }
+        }
+        div {
+            padding: 0;
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    footer {
+        padding: 3.5rem 4rem 2rem 4rem;
+        div:first-child {
+            width: 30%;
+        }
+        .icons-footer {
+            width: 70%;
+        }
+        div:nth-child(2) {
+            h4 {
+                font-size: 1.3rem;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

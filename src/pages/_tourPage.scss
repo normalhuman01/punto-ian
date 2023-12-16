@@ -1,0 +1,31 @@
+#tourPage {
+    padding: 8rem 1rem;
+    h1 {
+        text-align: center;
+        color: $primaryColor;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    article {
+        h2 {
+            text-transform: unset;
+            font-size: 1.2rem;
+        }
+        padding: 1rem 0;
+        iframe {
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 998px) {
+    #tourPage {
+        article {
+            height: 500px;
+            h2 {
+                text-transform: unset;
+                font-size: 2rem;
+            }
+        }
+    }
+}

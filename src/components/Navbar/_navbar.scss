@@ -1,0 +1,62 @@
+.navbar {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 1rem;
+    z-index: 9999;
+    .navbar-links {
+        display: none;
+        .navbar-links-active {
+            color: $primaryColor;
+        }
+    }
+    transition: all 0.3s ease-in;
+}
+.scrolled {
+    background-color: #ffffffd2;
+    height: 8%;
+    img {
+        width: 60%;
+    }
+    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.16);
+}
+@media all and (min-width: 1024px) {
+    .navbar {
+        padding: 1rem 2rem;
+        .navbar-icon-hamburg {
+            display: none;
+        }
+        .navbar-links {
+            display: flex;
+            ul {
+                width: 550px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                li {
+                    list-style: none;
+                    a {
+                        color: $secondaryColor;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        font-family: $font;
+                        font-weight: 800;
+                    }
+                }
+            }
+        }
+    }
+}
+@media all and (min-width: 1400px) {
+    .navbar {
+        padding: 1rem 6rem;
+        .navbar-links {
+            display: flex;
+            ul {
+                width: 600px;
+            }
+        }
+    }
+}

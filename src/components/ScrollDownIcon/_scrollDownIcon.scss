@@ -1,0 +1,61 @@
+@media (min-width: 998px) {
+    .mouse {
+        width: 30px;
+        height: 50px;
+        border: 2px solid #fff;
+        border-radius: 60px;
+        position: absolute;
+        bottom: 115px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        animation: down 2s infinite;
+        &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $primaryColor;
+            border-radius: 50%;
+            opacity: 1;
+            animation: wheel 1s infinite;
+            -webkit-animation: wheel 1s infinite;
+        }
+    }
+
+    @keyframes wheel {
+        to {
+            opacity: 0;
+            top: 20px;
+        }
+    }
+
+    @-webkit-keyframes wheel {
+        to {
+            opacity: 0;
+            top: 20px;
+        }
+    }
+
+    @keyframes down {
+        from {
+            bottom: 115px;
+        }
+        to {
+            bottom: 90px;
+        }
+    }
+
+    @-webkit-keyframes down {
+        from {
+            bottom: 115px;
+        }
+        to {
+            bottom: 90px;
+        }
+    }
+}
